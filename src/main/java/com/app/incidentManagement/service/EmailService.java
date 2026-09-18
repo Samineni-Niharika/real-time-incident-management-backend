@@ -37,21 +37,5 @@ public class EmailService {
 
         mailSender.send(message);
     }
-    @PostConstruct
-    public void checkMailConfig() {
-        String username = System.getenv("MAIL_USERNAME");
-        String password = System.getenv("MAIL_PASSWORD");
 
-        System.out.println("MAIL_USERNAME present: "
-                + (username != null && !username.isBlank()));
-
-        System.out.println("MAIL_USERNAME value: "
-                + username);
-
-        System.out.println("MAIL_PASSWORD present: "
-                + (password != null && !password.isBlank()));
-
-        System.out.println("MAIL_PASSWORD length: "
-                + (password == null ? 0 : password.length()));
-    }
 }
